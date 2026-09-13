@@ -4,8 +4,8 @@ import { hero, locations } from "@/content/site";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-brand-950 text-white">
-      {/* Achtergrondlagen: raster + twee zachte lichtvlekken. */}
+    <section className="relative [url('./image/cleaning.png')] bg-cover bg-center text-white py-20 px-4 sm:px-6">
+      {/* Background layers: grid + two soft light spots. */}
       <div className="absolute inset-0 bg-grid opacity-40" aria-hidden="true" />
       <div
         className="absolute -left-40 -top-40 size-[36rem] rounded-full bg-brand-600/25 blur-[120px]"
@@ -79,7 +79,7 @@ export function Hero() {
             </dl>
           </div>
 
-          {/* Visueel blok: een 'vandaag gereinigd'-kaart in plaats van een stockfoto. */}
+          {/* Visual block: a 'today cleaned' card instead of a stock photo. */}
           <div
             className="animate-fade-up lg:col-span-5"
             style={{ animationDelay: "300ms" }}
@@ -90,20 +90,20 @@ export function Hero() {
               <div className="relative rounded-[1.75rem] bg-white p-7 text-brand-950 shadow-lift">
                 <div className="flex items-center justify-between">
                   <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sand-500">
-                    Vandaag afgerond
+                    Today Completed
                   </p>
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-100 px-2.5 py-1 text-[0.6875rem] font-semibold text-accent-600">
                     <span className="size-1.5 rounded-full bg-accent-400" />
-                    Gecontroleerd
+                    Verified
                   </span>
                 </div>
 
                 <ul className="mt-6 space-y-3.5">
                   {[
-                    "Keuken en sanitair",
-                    "Vloeren gestofzuigd en gedweild",
-                    "Ramen binnenzijde",
-                    "Afval gescheiden afgevoerd",
+                    "Kitchen and sanitation",
+                    "Floors vacuumed and mopped",
+                    "Windows inside",
+                    "Waste disposed of separately"
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm">
                       <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-accent-100 text-accent-600">
@@ -120,7 +120,7 @@ export function Hero() {
                   </span>
                   <div className="text-xs leading-tight">
                     <p className="font-medium">Sanne T.</p>
-                    <p className="text-sand-500">Teamleider · Amsterdam</p>
+                    <p className="text-sand-500">Teamleader · Amsterdam</p>
                   </div>
                 </div>
               </div>
