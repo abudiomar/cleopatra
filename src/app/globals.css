@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/* Design tokens                                                       */
+/* ------------------------------------------------------------------ */
+
+@theme {
+  /* Merkkleur — diep, rustig blauw. Betrouwbaar zonder klinisch te worden. */
+  --color-brand-50: #eff5ff;
+  --color-brand-100: #dbe8fe;
+  --color-brand-200: #bfd7fe;
+  --color-brand-300: #93bbfd;
+  --color-brand-400: #6096fa;
+  --color-brand-500: #3d7cff;
+  --color-brand-600: #2456d4;
+  --color-brand-700: #1d43a8;
+  --color-brand-800: #1c3a85;
+  --color-brand-900: #0f2350;
+  --color-brand-950: #0a1733;
+
+  /* Warme neutralen — voorkomt dat het geheel koud aanvoelt. */
+  --color-sand-50: #faf9f7;
+  --color-sand-100: #f3f1ed;
+  --color-sand-200: #e7e3dc;
+  --color-sand-300: #d5cfc4;
+  --color-sand-400: #b0a898;
+  --color-sand-500: #8c8375;
+  --color-sand-600: #6b6355;
+  --color-sand-700: #514b40;
+  --color-sand-800: #363229;
+  --color-sand-900: #1f1c17;
+
+  /* Accent — zacht mint, verwijst naar milieuvriendelijk werken. */
+  --color-accent-100: #d6f5ec;
+  --color-accent-400: #4fc9a5;
+  --color-accent-600: #17977a;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --radius-card: 1.25rem;
+
+  --shadow-soft: 0 1px 2px rgb(15 35 80 / 0.04), 0 8px 24px -8px rgb(15 35 80 / 0.10);
+  --shadow-lift: 0 2px 4px rgb(15 35 80 / 0.05), 0 18px 40px -12px rgb(15 35 80 / 0.18);
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Basis                                                               */
+/* ------------------------------------------------------------------ */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-sand-50);
+    color: var(--color-brand-950);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Koppen mogen strak zetten; lopende tekst niet. */
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-200);
+    color: var(--color-brand-950);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Hulpklassen                                                         */
+/* ------------------------------------------------------------------ */
+
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: 1.25rem;
+
+  @media (width >= 768px) {
+    padding-inline: 2rem;
+  }
+}
+
+/* Fijn raster als achtergrondtextuur, vervangt een stockfoto. */
+@utility bg-grid {
+  background-image: linear-gradient(
+      to right,
+      rgb(255 255 255 / 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
