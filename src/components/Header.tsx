@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-
+import { Image } from "@/components/ui/Image";
 import { Logo } from "@/components/Logo";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { contact, nav } from "@/content/site";
+
 
 export function Header() {
   const pathname = usePathname();
@@ -26,7 +27,7 @@ export function Header() {
     setOpen(false);
   }, [pathname]);
 
-  // Achtergrond niet laten scrollen zolang het mobiele menu open is.
+  // Don't let the background scroll while the mobile menu is open.
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
@@ -40,7 +41,7 @@ export function Header() {
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-100 focus:rounded-full focus:bg-brand-900 focus:px-5 focus:py-2.5 focus:text-sm focus:text-white"
       >
-        Naar hoofdinhoud
+        To main content
       </a>
 
       <header

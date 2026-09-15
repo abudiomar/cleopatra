@@ -1,9 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 
-/**
- * Woordmerk met een simpel monogram. Bewust als code en niet als
- * afbeelding, zodat het scherp blijft en meekleurt met de achtergrond.
- */
 export function Logo({
   tone = "dark",
   className = "",
@@ -17,17 +14,16 @@ export function Logo({
     <Link
       href="/"
       className={`group inline-flex items-center gap-3 ${className}`}
-      aria-label="Cleopatra Professional Cleaning — naar de homepage"
+      aria-label="Cleopatra Professional Cleaning — to the homepage"
     >
-      <span
-        className={`grid size-10 shrink-0 place-items-center rounded-xl text-[0.9375rem] font-semibold tracking-tight transition-transform duration-300 group-hover:-rotate-6 ${
-          isLight
-            ? "bg-white text-brand-900"
-            : "bg-brand-900 text-white"
-        }`}
-      >
-        CP
-      </span>
+      <Image
+        src={`/image/cleobatra Logo1.png`}
+        alt=""
+        width={60}
+        height={60}
+        className="size-10 shrink-0 rounded-xl transition-transform duration-300 group-hover:-rotate-6"
+        priority
+      />
 
       <span className="flex flex-col leading-none">
         <span

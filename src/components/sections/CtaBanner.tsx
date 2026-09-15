@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { contact } from "@/content/site";
-
+import { Image } from "@/components/ui/Image";
 export function CtaBanner({
-  title = "Klaar voor een pand dat er altijd goed bij staat?",
-  body = "Vertel ons kort wat u zoekt. Wij reageren binnen één werkdag en plannen een vrijblijvende kennismaking op locatie.",
+  title = "Ready for a property that always looks great?",
+  body = "Tell us briefly what you're looking for. We'll respond within one business day and schedule a no-obligation meeting on location.",
 }: {
   title?: string;
   body?: string;
@@ -32,7 +32,7 @@ export function CtaBanner({
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button href="/contact" variant="white" size="lg">
-                Offerte aanvragen
+                Request Quote
                 <Icon name="arrow" className="size-4" />
               </Button>
               <Button
@@ -41,7 +41,7 @@ export function CtaBanner({
                 className="bg-white/10 text-white ring-1 ring-white/20 backdrop-blur hover:bg-white/15"
               >
                 <Icon name="phone" className="size-4" />
-                Bel {contact.phoneDisplay}
+                Call {contact.phoneDisplay}
               </Button>
             </div>
           </div>

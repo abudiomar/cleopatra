@@ -114,16 +114,16 @@
   }
 }
 
-/* Fijn raster als achtergrondtextuur, vervangt een stockfoto. */
+/* Nice grid as a background texture, replaces a stock photo. */
 @utility bg-grid {
-  background-image: linear-gradient(
-      to right,
-      rgb(255 255 255 / 0.06) 1px,
-      transparent 1px
-    ),
-    linear-gradient(to bottom, rgb(255 255 255 / 0.06) 1px, transparent 1px);
-  background-size: 56px 56px;
+  background-image: url('./image/cleaning.png');
+  background-size: cover;
+  background-position: center;
 }
+
+
+
+
 
 @media (prefers-reduced-motion: reduce) {
   html {

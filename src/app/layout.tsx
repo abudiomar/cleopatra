@@ -22,13 +22,12 @@ export const metadata: Metadata = {
   },
   description: site.description,
   keywords: [
-    "schoonmaakbedrijf",
-    "schoonmaak Amsterdam",
-    "kantoorschoonmaak",
-    "opleveringsschoonmaak",
-    "glasbewassing",
-    "huishoudelijke hulp",
-    "professionele reiniging",
+    "cleaning Amsterdam", 
+    "office cleaning",
+    "final cleaning",
+    "window cleaning", 
+    "household help", 
+    "professional cleaning"
   ],
   alternates: { canonical: "/" },
   openGraph: {
@@ -63,7 +62,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="nl" className={inter.variable}>
+    <html lang="en" className={inter.variable}>
       <body className="flex min-h-dvh flex-col">
         <JsonLd />
         <Header />

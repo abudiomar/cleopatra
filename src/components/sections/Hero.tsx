@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { hero, locations } from "@/content/site";
-
+import { Image} from "@/components/ui/Image";
 export function Hero() {
   return (
-    <section className="relative [url('./image/cleaning.png')] bg-cover bg-center text-white py-20 px-4 sm:px-6">
+    <section
+      className="relative   bg-cover bg-center text-white backgroundImage: url('./image/cleaning.png')"
+    >
       {/* Background layers: grid + two soft light spots. */}
-      <div className="absolute inset-0 bg-grid opacity-40" aria-hidden="true" />
+      <div className="absolute inset-0 bg-grid opacity-100" aria-hidden="true" />
       <div
         className="absolute -left-40 -top-40 size-[36rem] rounded-full bg-brand-600/25 blur-[120px]"
         aria-hidden="true"

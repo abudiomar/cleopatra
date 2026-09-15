@@ -1,14 +1,15 @@
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { usps } from "@/content/site";
+import { Image, type LogoName } from "@/components/ui/Image";
 
 export function Usps() {
   return (
     <Section tone="white">
       <SectionHeader
-        eyebrow="Waarom met ons werken"
-        title="Drie dingen waar u ons op mag afrekenen"
-        intro="Geen loze beloftes, maar afspraken die wij aantoonbaar nakomen."
+        eyebrow="Why work with us"
+        title="Three things you can hold us accountable for"
+        intro="No empty promises, just commitments we can actually keep."
       />
 
       <div className="mt-14 grid gap-6 md:grid-cols-3">
