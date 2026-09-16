@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { contact } from "@/content/site";
-import { Image } from "@/components/ui/Image";
+
 export function CtaBanner({
   title = "Ready for a property that always looks great?",
   body = "Tell us briefly what you're looking for. We'll respond within one business day and schedule a no-obligation meeting on location.",

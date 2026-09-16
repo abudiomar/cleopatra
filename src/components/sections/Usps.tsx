@@ -1,7 +1,6 @@
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { usps } from "@/content/site";
-import { Image, type LogoName } from "@/components/ui/Image";
 
 export function Usps() {
   return (

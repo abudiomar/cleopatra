@@ -17,11 +17,11 @@ export function Logo({
       aria-label="Cleopatra Professional Cleaning — to the homepage"
     >
       <Image
-        src={`/image/cleobatra Logo1.png`}
+        src="/image/cleobatra-logo.png"
         alt=""
         width={60}
         height={60}
-        className="size-10 shrink-0 rounded-xl transition-transform duration-300 group-hover:-rotate-6"
+        className="size-10 shrink-0 rounded-xl object-contain transition-transform duration-300 group-hover:-rotate-6"
         priority
       />
 

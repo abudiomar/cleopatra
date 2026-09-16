@@ -1,12 +1,10 @@
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { hero, locations } from "@/content/site";
-import { Image} from "@/components/ui/Image";
+
 export function Hero() {
   return (
-    <section
-      className="relative   bg-cover bg-center text-white backgroundImage: url('./image/cleaning.png')"
-    >
+    <section className="relative overflow-hidden bg-brand-950 text-white">
       {/* Background layers: grid + two soft light spots. */}
       <div className="absolute inset-0 bg-grid opacity-100" aria-hidden="true" />
       <div

@@ -116,7 +116,7 @@
 
 /* Nice grid as a background texture, replaces a stock photo. */
 @utility bg-grid {
-  background-image: url('./image/cleaning.png');
+  background-image: url('/image/cleaning.png');
   background-size: cover;
   background-position: center;
 }

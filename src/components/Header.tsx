@@ -3,12 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Image } from "@/components/ui/Image";
 import { Logo } from "@/components/Logo";
 import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { contact, nav } from "@/content/site";
-
 
 export function Header() {
   const pathname = usePathname();
