@@ -52,7 +52,7 @@ export function Header() {
         <div className="container-page flex h-20 items-center justify-between gap-6">
           <Logo />
 
-          <nav aria-label="Hoofdmenu" className="hidden lg:block">
+          <nav aria-label="Main Menu" className="hidden lg:block">
             <ul className="flex items-center gap-1">
               {nav.map((item) => {
                 const active =
@@ -91,7 +91,7 @@ export function Header() {
               {contact.phoneDisplay}
             </a>
             <Button href="/contact" size="sm">
-              Offerte aanvragen
+              Request a quote
             </Button>
           </div>
 
@@ -99,8 +99,8 @@ export function Header() {
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
-            aria-controls="mobiel-menu"
-            aria-label={open ? "Menu sluiten" : "Menu openen"}
+            aria-controls="mobile-menu"
+            aria-label={open ? "Close menu" : "Open menu"}
             className="grid size-11 place-items-center rounded-full text-brand-900 ring-1 ring-sand-300 transition-colors hover:bg-white lg:hidden"
           >
             <Icon name={open ? "close" : "menu"} className="size-5" />
@@ -108,13 +108,13 @@ export function Header() {
         </div>
       </header>
 
-      {/* Mobiel menu */}
+      {/* Mobile menu */}
       <div
-        id="mobiel-menu"
+        id="mobile-menu"
         hidden={!open}
         className="fixed inset-x-0 top-20 bottom-0 z-40 overflow-y-auto bg-sand-50 px-5 pb-10 pt-4 lg:hidden"
       >
-        <nav aria-label="Mobiel menu">
+        <nav aria-label="Mobile menu">
           <ul className="flex flex-col">
             {nav.map((item) => (
               <li key={item.href} className="border-b border-sand-200">
@@ -132,11 +132,11 @@ export function Header() {
 
         <div className="mt-8 flex flex-col gap-3">
           <Button href="/contact" size="lg">
-            Offerte aanvragen
+            Request a quote
           </Button>
           <Button href={contact.phoneHref} variant="secondary" size="lg">
             <Icon name="phone" className="size-4" />
-            Bel {contact.phoneDisplay}
+            Call {contact.phoneDisplay}
           </Button>
         </div>
       </div>

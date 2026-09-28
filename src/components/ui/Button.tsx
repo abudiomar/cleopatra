@@ -11,14 +11,14 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-brand-900 text-white shadow-soft hover:bg-brand-800 hover:shadow-lift " +
+    "bg-gold-500 text-white shadow-soft hover:bg-gold-700 hover:shadow-lift " +
     "active:translate-y-px",
   secondary:
-    "bg-white text-brand-900 ring-1 ring-sand-300 hover:ring-brand-300 " +
-    "hover:bg-brand-50 active:translate-y-px",
+    "bg-white text-gold-700 ring-1 ring-sand-300 hover:ring-gold-500 " +
+    "hover:bg-gold-300 active:translate-y-px",
   ghost: "text-brand-900 hover:bg-brand-50",
   white:
-    "bg-white text-brand-900 shadow-soft hover:bg-sand-100 active:translate-y-px",
+    "bg-gold-500 text-white shadow-soft hover:bg-sand-100 active:translate-y-px",
 };
 
 const sizes: Record<Size, string> = {
@@ -31,9 +31,9 @@ type ButtonProps = Omit<
   ComponentPropsWithoutRef<"button">,
   "className" | "children"
 > & {
-  /** Aanwezig? Dan rendert de component een link in plaats van een button. */
+  /** Present? Then the component renders a link instead of a button. */
   href?: string;
-  /** Forceert target="_blank" voor een interne URL. */
+  /** Forces target="_blank" for an internal URL. */
   external?: boolean;
   variant?: Variant;
   size?: Size;

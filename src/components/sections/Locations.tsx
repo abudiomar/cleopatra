@@ -7,9 +7,10 @@ export function Locations() {
     <Section tone="tint">
       <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
         <SectionHeader
-          eyebrow="Werkgebied"
-          title="Actief in vijf steden, met korte lijnen"
-          intro="Wij werken bewust binnen een beperkt gebied. Zo blijven reistijden kort, kunnen wij snel schakelen en kent uw teamleider de omgeving."
+          eyebrow="Area of ​​operation"
+          title="Active in five cities, with short lines of communication"
+          intro="We deliberately operate within a limited area. This keeps travel times short, allows us to respond quickly, and ensures your team leader knows the local area."
+
         />
 
         <ul className="grid gap-3 sm:grid-cols-2">
@@ -31,7 +32,7 @@ export function Locations() {
           ))}
 
           <li className="flex items-center gap-4 rounded-2xl border border-dashed border-brand-200 px-5 py-4 text-sm text-sand-600">
-            Staat uw plaats er niet bij? Vraag het ons gerust.
+            Does your city not appear? Please let us know.
           </li>
         </ul>
       </div>

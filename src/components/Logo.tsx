@@ -19,8 +19,8 @@ export function Logo({
       <Image
         src="/image/cleobatra-logo.png"
         alt=""
-        width={60}
-        height={60}
+        width={80}
+        height={80}
         className="size-10 shrink-0 rounded-xl object-contain transition-transform duration-300 group-hover:-rotate-6"
         priority
       />

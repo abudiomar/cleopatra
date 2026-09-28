@@ -119,14 +119,14 @@ export function Icon({
 }) {
   return (
     <svg
-      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className={className}
       fill="none"
+      viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth={strokeWidth}
       strokeLinecap="round"
       strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
     >
       {paths[name]}
     </svg>

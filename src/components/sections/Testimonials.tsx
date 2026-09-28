@@ -5,8 +5,8 @@ export function Testimonials() {
   return (
     <Section tone="white">
       <SectionHeader
-        eyebrow="Ervaringen"
-        title="Wat onze klanten erover zeggen"
+        eyebrow="Experiences"
+        title="What our customers say"
         align="center"
       />
 

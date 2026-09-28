@@ -8,9 +8,9 @@ import { Section } from "@/components/ui/Section";
 import { contact, locations } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Contact en offerte",
+  title: "Contact and quote request",
   description:
-    "Vraag vrijblijvend een offerte aan bij Cleopatra Professional Cleaning. Wij reageren binnen één werkdag en komen kosteloos langs om de situatie te bekijken.",
+    "Request a no-obligation quote from Cleopatra Professional Cleaning. We will respond within one business day and visit you free of charge to assess the situation.",
   alternates: { canonical: "/contact" },
 };
 
@@ -19,8 +19,8 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Vraag vrijblijvend een offerte aan"
-        intro="Vertel kort wat u zoekt. Wij reageren binnen één werkdag en plannen een kosteloze kennismaking op locatie."
+        title="Request a no-obligation quote"
+        intro="Briefly describe what you are looking for. We will respond within one business day and schedule a complimentary introductory meeting on-site."
       />
 
       <Section tone="light">
@@ -98,7 +98,7 @@ export default function ContactPage() {
 
               <div className="mt-8 border-t border-sand-200 pt-7">
                 <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-sand-500">
-                  Bereikbaarheid
+                  Accessibility
                 </h3>
                 <dl className="mt-5 space-y-2.5 text-sm">
                   {contact.hours.map((h) => (
@@ -112,11 +112,11 @@ export default function ContactPage() {
 
               <div className="mt-8 border-t border-sand-200 pt-7">
                 <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-sand-500">
-                  Werkgebied
+                  Area of ​​operation
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-sand-600">
-                  {locations.map((l) => l.city).join(", ")} en directe
-                  omgeving.
+                  {locations.map((l) => l.city).join(", ")} and the immediate
+                  surrounding area.
                 </p>
               </div>
             </div>

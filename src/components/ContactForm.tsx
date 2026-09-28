@@ -59,17 +59,16 @@ export function ContactForm() {
         <span className="mx-auto grid size-14 place-items-center rounded-full bg-accent-400 text-white">
           <Icon name="check" className="size-7" strokeWidth={2.4} />
         </span>
-        <h2 className="mt-6 text-2xl font-semibold">Bedankt voor uw bericht</h2>
+        <h2 className="mt-6 text-2xl font-semibold">Thank you for your message</h2>
         <p className="mx-auto mt-3 max-w-md leading-relaxed text-sand-700">
-          Wij hebben uw aanvraag ontvangen en nemen binnen één werkdag contact
-          met u op. Heeft u haast? Bel ons gerust direct.
+          We have received your request and will contact you within one business day. In a hurry? Feel free to call us directly.
         </p>
         <Button
           variant="secondary"
           className="mt-8"
           onClick={() => setStatus("idle")}
         >
-          Nog een bericht sturen
+          Send another message
         </Button>
       </div>
     );
@@ -100,11 +99,11 @@ export function ContactForm() {
           </label>
           <input
             id="naam"
-            name="naam"
+            name="name"
             type="text"
             required
             autoComplete="name"
-            placeholder="Uw voor- en achternaam"
+            placeholder="Your first and last name"
             className={`${field} mt-2`}
           />
         </div>
@@ -119,18 +118,18 @@ export function ContactForm() {
             type="email"
             required
             autoComplete="email"
-            placeholder="naam@voorbeeld.nl"
+            placeholder="your.email@example.com"
             className={`${field} mt-2`}
           />
         </div>
 
         <div>
           <label htmlFor="telefoon" className={label}>
-            Telefoonnummer
+            Phone Number
           </label>
           <input
             id="telefoon"
-            name="telefoon"
+            name="Phone Number"
             type="tel"
             autoComplete="tel"
             placeholder="06 12345678"
@@ -140,7 +139,7 @@ export function ContactForm() {
 
         <div>
           <label htmlFor="dienst" className={label}>
-            Waar gaat het om?
+            What is it about?
           </label>
           <select
             id="dienst"
@@ -148,26 +147,26 @@ export function ContactForm() {
             defaultValue=""
             className={`${field} mt-2`}
           >
-            <option value="">Maak een keuze</option>
+            <option value="">Make a choice</option>
             {services.map((service) => (
               <option key={service.slug} value={service.name}>
                 {service.name}
               </option>
             ))}
-            <option value="Anders">Anders / weet ik nog niet</option>
+            <option value="Anders">Anders / I don't know yet</option>
           </select>
         </div>
 
         <div className="sm:col-span-2">
           <label htmlFor="bericht" className={label}>
-            Uw bericht <span className="text-brand-600">*</span>
+            Your message <span className="text-brand-600">*</span>
           </label>
           <textarea
             id="bericht"
             name="bericht"
             required
             rows={5}
-            placeholder="Vertel kort over de ruimte, de gewenste frequentie en de locatie."
+            placeholder="Tell us briefly about the space, the desired frequency, and the location."
             className={`${field} mt-2 resize-y`}
           />
         </div>
@@ -184,12 +183,11 @@ export function ContactForm() {
 
       <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-xs leading-relaxed text-sand-500 sm:max-w-xs">
-          Wij gebruiken uw gegevens uitsluitend om op deze aanvraag te
-          reageren.
+          We use your information solely to respond to this request.
         </p>
 
         <Button type="submit" size="lg" disabled={status === "sending"}>
-          {status === "sending" ? "Bezig met versturen…" : "Aanvraag versturen"}
+          {status === "sending" ? "Sending…" : "Send Request"}
           {status !== "sending" && <Icon name="arrow" className="size-4" />}
         </Button>
       </div>

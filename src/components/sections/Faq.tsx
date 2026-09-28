@@ -14,7 +14,7 @@ const faqSchema = {
 
 export function Faq() {
   return (
-    <Section tone="white">
+    <Section tone="tint">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -22,9 +22,9 @@ export function Faq() {
       <div className="grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <SectionHeader
-            eyebrow="Veelgestelde vragen"
-            title="Kort antwoord op wat u nu waarschijnlijk denkt"
-            intro="Staat uw vraag er niet bij? Bel of mail ons — u krijgt een mens aan de lijn."
+            eyebrow="Frequently Asked Questions"
+            title="Short answer to what you’re probably thinking now"
+            intro="Can't find your question? Call or email us — you’ll get a real person on the line."
           />
         </div>
 

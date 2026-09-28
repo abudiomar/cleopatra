@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------ */
-/* Design tokens                                                       */
+/* Design tokens                                                      */
 /* ------------------------------------------------------------------ */
 
 @theme {
-  /* Merkkleur — diep, rustig blauw. Betrouwbaar zonder klinisch te worden. */
+  /* Brand color — deep, calm blue. Trustworthy without being clinical. */
   --color-brand-50: #eff5ff;
   --color-brand-100: #dbe8fe;
   --color-brand-200: #bfd7fe;
@@ -17,8 +17,13 @@
   --color-brand-800: #1c3a85;
   --color-brand-900: #0f2350;
   --color-brand-950: #0a1733;
-
-  /* Warme neutralen — voorkomt dat het geheel koud aanvoelt. */
+  
+  --color-brand-950: #E6C76A;
+  /* New accent scale for gold */
+  --color-gold-300: #f0d488;
+  --color-gold-500: #e6c76a;
+  --color-gold-700: #c9a23d;
+  /* Warm neutrals — prevents the whole thing from feeling cold. */
   --color-sand-50: #faf9f7;
   --color-sand-100: #f3f1ed;
   --color-sand-200: #e7e3dc;
@@ -29,8 +34,8 @@
   --color-sand-700: #514b40;
   --color-sand-800: #363229;
   --color-sand-900: #1f1c17;
-
-  /* Accent — zacht mint, verwijst naar milieuvriendelijk werken. */
+  
+  /* Accent — soft mint, refers to environmentally friendly working. */
   --color-accent-100: #d6f5ec;
   --color-accent-400: #4fc9a5;
   --color-accent-600: #17977a;
@@ -75,7 +80,7 @@
     text-rendering: optimizeLegibility;
   }
 
-  /* Koppen mogen strak zetten; lopende tekst niet. */
+  /* Headings can be set tight; running text cannot. */
   h1,
   h2,
   h3 {
@@ -100,7 +105,7 @@
 }
 
 /* ------------------------------------------------------------------ */
-/* Hulpklassen                                                         */
+/* Helper classes                                                        */
 /* ------------------------------------------------------------------ */
 
 @utility container-page {

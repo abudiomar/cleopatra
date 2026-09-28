@@ -12,13 +12,13 @@ export function ServicesGrid({ limit }: { limit?: number }) {
     <Section tone="light">
       <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <SectionHeader
-          eyebrow="Diensten"
-          title="Van wekelijkse woningschoonmaak tot volledige oplevering"
-          intro="Particulier of zakelijk, structureel of eenmalig — wij stellen het pakket samen op basis van wat er werkelijk nodig is."
+          eyebrow="Services"
+          title="From weekly cleaning to full move-in"
+          intro="Private or business, structured or one-time — we tailor the package based on what's actually needed."
         />
 
-        <Button href="/diensten" variant="secondary" className="shrink-0">
-          Alle diensten
+        <Button href="/services" variant="secondary" className="shrink-0">
+          All services
           <Icon name="arrow" className="size-4" />
         </Button>
       </div>
@@ -27,7 +27,7 @@ export function ServicesGrid({ limit }: { limit?: number }) {
         {list.map((service) => (
           <Link
             key={service.slug}
-            href={`/diensten#${service.slug}`}
+            href={`/services#${service.slug}`}
             className="group flex flex-col rounded-card border border-sand-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-lift"
           >
             <div className="flex items-start justify-between gap-4">
@@ -47,7 +47,7 @@ export function ServicesGrid({ limit }: { limit?: number }) {
             </p>
 
             <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand-700">
-              Meer over deze dienst
+             More about this service
               <Icon
                 name="arrow"
                 className="size-4 transition-transform duration-300 group-hover:translate-x-1"

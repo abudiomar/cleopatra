@@ -1,10 +1,10 @@
 import { contact, locations, services, site } from "@/content/site";
 
 /**
- * Gestructureerde data voor Google. Belangrijk voor een lokaal
- * dienstverlenend bedrijf: hiermee kan de zaak in de lokale resultaten
- * en in het kennispaneel verschijnen.
- */
+* Structured data for Google. Important for a local
+* service-oriented business: this can help the business appear in local results
+* and in the knowledge panel.
+*/
 export function JsonLd() {
   const localBusiness = {
     "@context": "https://schema.org",

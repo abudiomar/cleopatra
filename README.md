@@ -1,24 +1,20 @@
 # Cleopatra Professional Cleaning — website
 
-Nieuwe website voor Cleopatra Professional Cleaning, ter vervanging van de
-bestaande site op cleopatraschoonmaak.nl.
+New website for Cleopatra Professional Cleaning, to replace the existing site on cleopatraschoonmaak.nl.
 
 ## Uitgangspunten
 
-De huidige site draait **niet** op WordPress, maar op de **One.com Web
-Editor** — een gehoste drag-and-drop bouwer. Er is dus geen thema, geen
-PHP en geen database om te migreren. Alle content in dit project is
-overgenomen van de live site en herschreven.
+The current site **does not** run on WordPress, but on the **One.com Web Editor** — a hosted drag-and-drop builder. So there is no theme, no PHP, and no database to migrate. All content in this project has been taken from the live site and rewritten.
 
-| | Oud | Nieuw |
-| --- | --- | --- |
-| Platform | One.com Web Editor | Next.js 15 (App Router) |
-| Styling | Editor-gegenereerd | Tailwind CSS v4 |
-| Content | In de editor | `src/content/site.ts` |
-| Talen | Nederlands | Nederlands |
-| Hosting | One.com | Vrij te kiezen (Vercel aanbevolen) |
+|           | Old                | New                                 |
+| --------- | ------------------ | ----------------------------------- |
+| Platform  | One.com Web Editor | Next.js 15 (App Router)             |
+| Styling   | Editor-generated   | Tailwind CSS v4                     |
+| Content   | In the editor      | `src/content/site.ts`               |
+| Languages | Dutch              | English                             |
+| Hosting   | One.com            | Free to choose (Vercel recommended) |
 
-## Aan de slag
+## Getting Started
 
 ```bash
 npm install
@@ -26,13 +22,13 @@ cp .env.example .env.local
 npm run dev
 ```
 
-De site draait dan op http://localhost:3000.
+The site will then run at http://localhost:3000.
 
 ```bash
-npm run build      # productiebuild
-npm run start      # productiebuild lokaal draaien
-npm run lint       # ESLint
-npm run typecheck  # TypeScript zonder build
+npm run build # production build
+npm run start # run production build locally
+npm run lint # ESLint
+npm run typecheck # TypeScript without building
 ```
 
 ## Structuur
