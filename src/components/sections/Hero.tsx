@@ -5,8 +5,13 @@ import { hero, locations } from "@/content/site";
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-brand-950 text-white">
-      {/* Background layers: grid + two soft light spots. */}
+      {/* Background layers: photo + dimmer + two soft light spots. */}
       <div className="absolute inset-0 bg-grid opacity-100" aria-hidden="true" />
+      {/* Dimmer: darkest behind the text on the left so white copy stays readable. */}
+      <div
+        className="absolute inset-0 bg-gradient-to-r from-brand-900/90 via-brand-900/70 to-brand-900/45"
+        aria-hidden="true"
+      />
       <div
         className="absolute -left-40 -top-40 size-[36rem] rounded-full bg-brand-600/25 blur-[120px]"
         aria-hidden="true"
