@@ -13,7 +13,7 @@ export function Process() {
       <div className="relative">
         <SectionHeader
           eyebrow="Working method"
-          tone="tint"
+          tone="light"
           title="From first question to established routine"
           intro="Four steps. You always know where you are and who will be coming by."
         />
