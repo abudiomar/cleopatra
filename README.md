@@ -12,7 +12,7 @@ The current site **does not** run on WordPress, but on the **One.com Web Editor*
 | Styling   | Editor-generated   | Tailwind CSS v4                     |
 | Content   | In the editor      | `src/content/site.ts`               |
 | Languages | Dutch              | English                             |
-| Hosting   | One.com            | Free to choose (Vercel recommended) |
+| Hosting   | One.com            | Cloudflare Workers (static assets)  |
 
 ## Getting Started
 
@@ -44,7 +44,6 @@ src/
 │   ├── contact/page.tsx            Formulier en contactgegevens
 │   ├── privacy/page.tsx            Privacybeleid (concept)
 │   ├── algemene-voorwaarden/       Plaatshouder — nog aan te leveren
-│   ├── api/contact/route.ts        Verwerking van het contactformulier
 │   ├── sitemap.ts / robots.ts      SEO
 │   └── not-found.tsx               404
 ├── components/
@@ -62,24 +61,22 @@ aanpassen, hoeft geen componenten aan te raken.
 
 ## Contactformulier
 
-De route `POST /api/contact` valideert de invoer, past een honeypot en een
-eenvoudige rate limit toe, en verstuurt de aanvraag via
-[Resend](https://resend.com).
+Het formulier post naar `POST /api/contact`. Omdat de site statisch is,
+wordt dat afgehandeld door de Cloudflare Worker in `worker/index.ts`: die
+valideert de invoer, past een honeypot en een eenvoudige rate limit toe, en
+verstuurt de aanvraag via de eigen mailserver van TransIP
+(`smtp.transip.email`, poort 465) met de SMTP-client in `worker/smtp.ts`.
 
-Zonder `RESEND_API_KEY` wordt de aanvraag alleen naar de console gelogd —
-handig tijdens ontwikkeling, maar **niet geschikt voor productie**. Zet de
-volgende variabelen vóór livegang:
+De Worker logt in op de mailbox `CONTACT_FROM_EMAIL` en mailt naar
+`CONTACT_TO_EMAIL` (beide `vars` in `wrangler.jsonc`). Die afzendermailbox
+moet in TransIP bestaan. Het wachtwoord als secret zetten:
 
+```bash
+npx wrangler secret put SMTP_PASSWORD
 ```
-RESEND_API_KEY=re_...
-CONTACT_TO_EMAIL=info@cleopatraschoonmaak.nl
-CONTACT_FROM_EMAIL=website@cleopatraschoonmaak.nl
-NEXT_PUBLIC_SITE_URL=https://cleopatraschoonmaak.nl
-```
 
-Wil de klant liever via de bestaande One.com-mailbox versturen, dan kan de
-Resend-aanroep in `src/app/api/contact/route.ts` worden vervangen door
-Nodemailer met SMTP.
+Zonder `SMTP_PASSWORD` wordt de aanvraag alleen gelogd (Workers Logs) —
+**niet geschikt voor productie**.
 
 ## Design
 
@@ -99,7 +96,7 @@ teams en projecten aanlevert, zijn dat de plekken om ze te plaatsen.
 - [ ] Echte foto's van team en projecten aanleveren en plaatsen
 - [ ] KvK- en btw-nummer invullen in `src/content/site.ts`
 - [ ] Vestigingsadres toevoegen (nu alleen `Amsterdam` in de schema.org-data)
-- [ ] Bevestigen of `info@cleopatraschoonmaak.nl` het juiste adres is
+- [ ] Bevestigen of `info@cleopatramultiservices.nl` het juiste adres is
 - [ ] Algemene voorwaarden aanleveren
 - [ ] Privacybeleid juridisch laten controleren
 - [ ] Testimonials vervangen door geverifieerde klantcitaten met toestemming
@@ -109,9 +106,24 @@ teams en projecten aanlevert, zijn dat de plekken om ze te plaatsen.
 
 ## Deployment
 
-Aanbevolen: Vercel. Repository koppelen, de omgevingsvariabelen uit
-`.env.example` invullen, en het domein `cleopatraschoonmaak.nl`
-overzetten. Werkt verder op elke host die Node draait.
+De site draait op **Cloudflare Workers** (account van Cleopatra, zie
+`account_id` in `wrangler.jsonc`):
 
-Oude URLs worden afgevangen via `next.config.ts`:
-`/services` → `/diensten`, `/about` → `/over-ons`, `/blog` → `/`.
+- `next build` maakt een statische export in `out/`, die als Static Assets
+  wordt geserveerd.
+- `worker/index.ts` handelt alleen `/api/*` af (het contactformulier).
+- Redirects en security headers staan in `public/_redirects` en
+  `public/_headers`.
+
+```bash
+npm run preview   # bouwen en lokaal draaien op de Cloudflare-runtime
+npm run deploy    # bouwen en publiceren
+```
+
+Live: https://cleopatramultiservices.nl (Custom Domain van de Worker, zie
+`routes` in `wrangler.jsonc`). `www` wordt met een Cloudflare Redirect Rule
+naar het hoofddomein doorgestuurd.
+
+Oude URLs worden doorgestuurd via `public/_redirects`:
+`/diensten` → `/services`, `/over-ons` → `/about`,
+`/algemene-voorwaarden` → `/general-terms-and-conditions`, `/blog` → `/`.

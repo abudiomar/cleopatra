@@ -4,7 +4,7 @@ import { Icon } from "@/components/ui/Icon";
 export default function NotFound() {
   return (
     <section className="relative overflow-hidden bg-brand-950 text-white">
-      <div className="absolute inset-0 bg-grid opacity-40" aria-hidden="true" />
+      <div className="absolute inset-0 bg-grid opacity-20" aria-hidden="true" />
       <div
         className="absolute -left-32 -top-32 size-[30rem] rounded-full bg-brand-600/25 blur-[110px]"
         aria-hidden="true"
@@ -17,7 +17,7 @@ export default function NotFound() {
         <h1 className="mt-5 max-w-xl text-4xl font-semibold leading-tight md:text-5xl">
           Deze pagina hebben wij niet kunnen vinden
         </h1>
-        <p className="mt-5 max-w-md leading-relaxed text-brand-100/70">
+        <p className="mt-5 max-w-md leading-relaxed text-brand-100/90">
           Mogelijk is de pagina verplaatst of bestaat de link niet meer. Ga
           terug naar de homepage of bekijk direct onze diensten.
         </p>
@@ -28,7 +28,7 @@ export default function NotFound() {
             <Icon name="arrow" className="size-4" />
           </Button>
           <Button
-            href="/diensten"
+            href="/services"
             size="lg"
             className="bg-white/10 text-white ring-1 ring-white/20 hover:bg-white/15"
           >

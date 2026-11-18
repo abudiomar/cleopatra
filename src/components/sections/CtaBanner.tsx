@@ -14,7 +14,7 @@ export function CtaBanner({
       <div className="container-page">
         <div className="relative overflow-hidden rounded-[2rem] bg-brand-900 px-8 py-14 text-white md:px-16 md:py-20">
           <div
-            className="absolute inset-0 bg-grid opacity-30"
+            className="absolute inset-0 bg-grid opacity-20"
             aria-hidden="true"
           />
           <div
@@ -26,7 +26,7 @@ export function CtaBanner({
             <h2 className="text-3xl font-semibold leading-[1.15] md:text-4xl">
               {title}
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-brand-100/75">
+            <p className="mt-5 text-lg leading-relaxed text-brand-100/90">
               {body}
             </p>
 

@@ -41,7 +41,7 @@ export function Hero() {
             </h1>
 
             <p
-              className="animate-fade-up mt-7 max-w-xl text-lg leading-relaxed text-brand-100/75"
+              className="animate-fade-up mt-7 max-w-xl text-lg leading-relaxed text-brand-100/90"
               style={{ animationDelay: "120ms" }}
             >
               {hero.intro}
@@ -75,7 +75,7 @@ export function Hero() {
                     <span className="block text-3xl font-semibold tracking-tight">
                       {stat.value}
                     </span>
-                    <span className="mt-1.5 block text-xs leading-snug text-brand-100/55">
+                    <span className="mt-1.5 block text-xs leading-snug text-brand-100/80">
                       {stat.label}
                     </span>
                   </dd>
@@ -94,10 +94,10 @@ export function Hero() {
 
               <div className="relative rounded-[1.75rem] bg-white p-7 text-brand-950 shadow-lift">
                 <div className="flex items-center justify-between">
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sand-500">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sand-600">
                     Today Completed
                   </p>
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-100 px-2.5 py-1 text-[0.6875rem] font-semibold text-accent-600">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-100 px-2.5 py-1 text-[0.6875rem] font-semibold text-accent-700">
                     <span className="size-1.5 rounded-full bg-accent-400" />
                     Verified
                   </span>
@@ -125,13 +125,13 @@ export function Hero() {
                   </span>
                   <div className="text-xs leading-tight">
                     <p className="font-medium">Sanne T.</p>
-                    <p className="text-sand-500">Teamleader · Amsterdam</p>
+                    <p className="text-sand-600">Teamleader · Amsterdam</p>
                   </div>
                 </div>
               </div>
 
               <div className="relative mt-4 rounded-2xl bg-white/10 p-4 ring-1 ring-white/10 backdrop-blur">
-                <div className="flex items-center gap-2 text-xs text-brand-100/70">
+                <div className="flex items-center gap-2 text-xs text-brand-100">
                   <Icon name="pin" className="size-3.5 text-accent-400" />
                   <span>
                     Actief in{" "}

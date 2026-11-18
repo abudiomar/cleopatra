@@ -13,7 +13,7 @@ export function ServicesGrid({ limit }: { limit?: number }) {
       <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <SectionHeader
           eyebrow="Services"
-          title="From weekly cleaning to full move-in"
+          title="Many services, one partner"
           intro="Private or business, structured or one-time — we tailor the package based on what's actually needed."
         />
 

@@ -1,39 +1,19 @@
 import type { NextConfig } from "next";
 
+/**
+ * De site wordt als statische export gebouwd (`out/`) en geserveerd via
+ * Cloudflare Workers Static Assets. Redirects en security headers staan
+ * daarom in `public/_redirects` en `public/_headers`, en het contactformulier
+ * wordt afgehandeld door de Worker in `worker/index.ts`.
+ */
 const nextConfig: NextConfig = {
+  output: "export",
   reactStrictMode: true,
   poweredByHeader: false,
 
   images: {
-    formats: ["image/avif", "image/webp"],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cleopatraschoonmaak.nl",
-      },
-    ],
-  },
-
-  // Oude One.com-URLs doorsturen naar de nieuwe Nederlandse routes.
-  async redirects() {
-    return [
-      { source: "/services", destination: "/diensten", permanent: true },
-      { source: "/about", destination: "/over-ons", permanent: true },
-      { source: "/blog", destination: "/", permanent: false },
-    ];
-  },
-
-  async headers() {
-    return [
-      {
-        source: "/:path*",
-        headers: [
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-          { key: "X-Frame-Options", value: "SAMEORIGIN" },
-        ],
-      },
-    ];
+    // Geen Next.js image-server bij een statische export.
+    unoptimized: true,
   },
 };
 

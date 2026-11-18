@@ -7,13 +7,13 @@
  */
 
 export const site = {
-  name: "Cleopatra Professional Cleaning",
+  name: "Cleopatra Multi Services",
   shortName: "Cleopatra",
-  legalName: "Cleopatra Professional Cleaning",
-  tagline: "Professional cleaning for private and business clients",
+  legalName: "Cleopatra Multi Services",
+  tagline: "One partner for cleaning, logistics and business services",
   description:
-    "Cleopatra Professional Cleaning provides professional cleaning for private and business clients in Amsterdam, Rotterdam, Utrecht, The Hague, and Eindhoven. Environmentally friendly, flexible, and with controlled quality.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://cleopatra-professioneleschoonmaak.nl",
+    "Cleopatra Multi Services is a multiservice company for private and business clients in Amsterdam, Rotterdam, Utrecht, The Hague, and Eindhoven — from cleaning to logistics and business solutions. Flexible, reliable, and with controlled quality.",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://cleopatramultiservices.nl",
   locale: "nl_NL",
 } as const;
 
@@ -24,8 +24,8 @@ export const contact = {
   whatsapp: "+31614956713",
   whatsappDisplay: "06 1495 6713",
   whatsappHref: "https://wa.me/31614956713",
-  email: "info@cleopatraschoonmaak.nl",
-  emailHref: "mailto:info@cleopatraschoonmaak.nl",
+  email: "info@cleopatramultiservices.nl",
+  emailHref: "mailto:info@cleopatramultiservices.nl",
   kvk: "",
   btw: "",
   hours: [
@@ -38,7 +38,7 @@ export const contact = {
 export const nav = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "About us", href: "/about us" },
+  { label: "About us", href: "/about" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
@@ -47,11 +47,11 @@ export const nav = [
 /* ------------------------------------------------------------------ */
 
 export const hero = {
-  eyebrow: "Cleaning in the Randstad and beyond",
+  eyebrow: "Multiservice company in the Randstad and beyond",
   title: "An environment that makes sense,every day,",
-  titleAcceebnt: "every single day",
+  titleAccent: "every single day",
   intro:
-    "Cleopatra Professional Cleaning Cleopatra Professional Cleaning takes care of cleaning homes, offices, and commercial spaces. Fixed team, regular appointments, and results you don't have to worry about anymore.",
+    "Cleopatra Multi Services is one partner for homes and businesses — from cleaning homes, offices, and commercial spaces to logistics and business solutions. Fixed team, regular appointments, and results you don't have to worry about anymore.",
   primaryCta: { label: "Request a quote", href: "/contact" },
   secondaryCta: { label: "View our services", href: "/services" },
   stats: [
@@ -63,9 +63,9 @@ export const hero = {
 
 export const usps = [
   {
-    title: "Environmentally friendly cleaning methods",
+    title: "Environmentally friendly working methods",
     body:
-      "We work exclusively with biodegradable products and techniques that are safe for children, pets, and your staff. Clean without harsh chemical fumes, and without burdening the environment.",
+      "We work with biodegradable products and techniques that are safe for children, pets, and your staff. No harsh chemical fumes, and no unnecessary burden on the environment.",
     icon: "leaf",
   },
   {
@@ -230,11 +230,11 @@ export const workflow = [
 /* ------------------------------------------------------------------ */
 
 export const about = {
- title: "Cleaning is trust, not a transaction",
+ title: "Service is trust, not a transaction",
  intro:
  "We come to your home or workplace when you're not there. That requires people you know and agreements that are reliable.",
   paragraphs: [
-    "Cleopatra Professional Cleaning is built around a simple idea: a customer doesn’t want a cleaning company, a customer wants a space that feels right without having to think about it. That only works if the same people come back, know the space, and are proud of what they leave behind.",
+    "Cleopatra Multi Services is built around a simple idea: a customer doesn’t want a long list of suppliers, a customer wants things taken care of without having to think about it. That only works if the same people come back, know your space and your business, and are proud of what they leave behind.",
     "That’s why we work with dedicated teams for each client instead of a pool of substitutes. Our employees are hired, trained, and paid for the work they do. Organizing it this way is more expensive, and that’s exactly why the results stay consistent.",
     "We serve private clients in and around the Randstad and business clients from offices to practice spaces. Small enough to know you personally, big enough to keep going even during illness or vacations.",
   ],
@@ -301,10 +301,10 @@ export const locations = [
 export const faq = [
   {
    question: "Do you work with permanent staff?",
-answer: "Yes. You will be assigned a permanent team that returns for each cleaning. In case of vacation or illness, we arrange substitutes who are already familiar with your location.",
+answer: "Yes. You will be assigned a permanent team that returns for every visit. In case of vacation or illness, we arrange substitutes who are already familiar with your location.",
 },
 {
-question: "How much does cleaning cost with you?",
+question: "What do your services cost?",
 answer: "That depends on the area, frequency, and type of work. So we first come by and then give a fixed price per visit or per month, so you know exactly what to expect in advance.",
 },
 {

@@ -1,0 +1,5 @@
+# Oude URLs doorsturen naar de huidige routes (Cloudflare Workers Static Assets).
+/diensten               /services                      301
+/over-ons               /about                         301
+/algemene-voorwaarden   /general-terms-and-conditions  301
+/blog                   /                              302

@@ -11,8 +11,8 @@ import { about, hero } from "@/content/site";
 export const metadata: Metadata = {
   title: "Over ons",
   description:
-    "Cleopatra Professional Cleaning werkt met vaste teams per klant, medewerkers in loondienst en heldere schriftelijke afspraken. Lees waar wij voor staan.",
-  alternates: { canonical: "/over-ons" },
+    "Cleopatra Multi Services werkt met vaste teams per klant, medewerkers in loondienst en heldere schriftelijke afspraken. Lees waar wij voor staan.",
+  alternates: { canonical: "/about" },
 };
 
 export default function OverOnsPage() {
@@ -36,7 +36,7 @@ export default function OverOnsPage() {
 
           <aside className="lg:col-span-5">
             <div className="sticky top-32 rounded-card border border-sand-200 bg-sand-50 p-8">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-sand-500">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-sand-600">
                 In cijfers
               </h2>
 
@@ -46,7 +46,7 @@ export default function OverOnsPage() {
                     key={stat.label}
                     className="border-b border-sand-200 pb-6 last:border-0 last:pb-0"
                   >
-                    <dt className="text-sm text-sand-500">{stat.label}</dt>
+                    <dt className="text-sm text-sand-600">{stat.label}</dt>
                     <dd className="mt-1 text-3xl font-semibold tracking-tight text-brand-950">
                       {stat.value}
                     </dd>

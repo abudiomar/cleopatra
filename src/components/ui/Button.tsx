@@ -10,15 +10,17 @@ const base =
   "disabled:cursor-not-allowed disabled:opacity-60";
 
 const variants: Record<Variant, string> = {
+  // Gold backgrounds always carry navy text: white on gold fails contrast.
   primary:
-    "bg-gold-500 text-white shadow-soft hover:bg-gold-700 hover:shadow-lift " +
+    "bg-gold-500 text-brand-950 shadow-soft hover:bg-gold-700 hover:shadow-lift " +
     "active:translate-y-px",
   secondary:
-    "bg-white text-gold-700 ring-1 ring-sand-300 hover:ring-gold-500 " +
+    "bg-white text-brand-900 ring-1 ring-sand-300 hover:ring-gold-500 " +
     "hover:bg-gold-300 active:translate-y-px",
   ghost: "text-brand-900 hover:bg-brand-50",
+  // Used on dark sections (hero, CTA banner).
   white:
-    "bg-gold-500 text-white shadow-soft hover:bg-sand-100 active:translate-y-px",
+    "bg-gold-500 text-brand-950 shadow-soft hover:bg-gold-300 active:translate-y-px",
 };
 
 const sizes: Record<Size, string> = {

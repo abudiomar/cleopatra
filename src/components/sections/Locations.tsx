@@ -7,7 +7,7 @@ export function Locations() {
     <Section tone="tint">
       <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
         <SectionHeader
-          eyebrow="Area of ​​operation"
+          eyebrow="Area of operation"
           title="Active in five cities, with short lines of communication"
           intro="We deliberately operate within a limited area. This keeps travel times short, allows us to respond quickly, and ensures your team leader knows the local area."
 
@@ -24,7 +24,7 @@ export function Locations() {
               </span>
               <span className="leading-tight">
                 <span className="block font-medium">{loc.city}</span>
-                <span className="block text-sm text-sand-500">
+                <span className="block text-sm text-sand-600">
                   {loc.region}
                 </span>
               </span>

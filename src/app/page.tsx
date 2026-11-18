@@ -10,9 +10,9 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { Usps } from "@/components/sections/Usps";
 
 export const metadata: Metadata = {
-  title: "Cleaning company for private and business",
+  title: "Multiservice company for private and business clients",
   description:
-    "Professional cleaning of homes, offices and commercial buildings in Amsterdam, Rotterdam, Utrecht, The Hague and Eindhoven. Fixed teams, environmentally friendly products and a fixed price.",
+    "Cleaning, logistics and business solutions for homes, offices and commercial buildings in Amsterdam, Rotterdam, Utrecht, The Hague and Eindhoven. Fixed teams, one point of contact and a fixed price.",
   alternates: { canonical: "/" },
 };
 

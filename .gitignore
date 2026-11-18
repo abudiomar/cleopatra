@@ -19,3 +19,7 @@ next-env.d.ts
 .vercel
 .idea/
 .vscode/
+
+# Cloudflare
+.wrangler/
+.dev.vars*

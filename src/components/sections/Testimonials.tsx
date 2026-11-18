@@ -37,7 +37,7 @@ export function Testimonials() {
               </span>
               <span className="text-sm leading-tight">
                 <span className="block font-medium">{item.name}</span>
-                <span className="block text-sand-500">{item.role}</span>
+                <span className="block text-sand-600">{item.role}</span>
               </span>
             </figcaption>
           </figure>

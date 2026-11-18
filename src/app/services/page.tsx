@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Diensten",
   description:
     "Woningschoonmaak, kantoorschoonmaak, opleveringsschoonmaak, glasbewassing, vloeronderhoud en specialistische reiniging. Bekijk wat elke dienst precies inhoudt.",
-  alternates: { canonical: "/diensten" },
+  alternates: { canonical: "/services" },
 };
 
 export default function DienstenPage() {
@@ -20,7 +20,7 @@ export default function DienstenPage() {
     <>
       <PageHero
         eyebrow="Diensten"
-        title="Schoonmaak die past bij hoe u werkt en woont"
+        title="Diensten die passen bij hoe u werkt en woont"
         intro="Zes diensten die wij structureel of eenmalig uitvoeren. Elke opdracht krijgt een eigen werkomschrijving, zodat volstrekt duidelijk is wat er gebeurt."
       />
 
@@ -59,7 +59,7 @@ export default function DienstenPage() {
                     <span className="rounded-full bg-sand-100 px-3 py-1 text-xs font-medium text-sand-600">
                       {service.audience}
                     </span>
-                    <span className="ml-auto text-sm font-medium text-sand-300">
+                    <span className="ml-auto text-sm font-medium text-sand-600">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                   </div>
@@ -87,7 +87,7 @@ export default function DienstenPage() {
 
                 <div className="lg:col-span-5">
                   <div className="rounded-2xl bg-sand-50 p-7">
-                    <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-sand-500">
+                    <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-sand-600">
                       Dit is inbegrepen
                     </h3>
                     <ul className="mt-5 space-y-3">

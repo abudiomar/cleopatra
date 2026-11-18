@@ -123,7 +123,7 @@ export function Header() {
                   className="flex items-center justify-between py-5 text-xl font-medium text-brand-950"
                 >
                   {item.label}
-                  <Icon name="arrow" className="size-5 text-sand-400" />
+                  <Icon name="arrow" className="size-5 text-sand-500" />
                 </Link>
               </li>
             ))}

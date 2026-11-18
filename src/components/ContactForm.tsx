@@ -10,7 +10,7 @@ type Status = "idle" | "sending" | "sent" | "error";
 
 const field =
   "w-full rounded-xl border border-sand-300 bg-white px-4 py-3 text-[0.9375rem] " +
-  "text-brand-950 placeholder:text-sand-400 transition-colors " +
+  "text-brand-950 placeholder:text-sand-600 transition-colors " +
   "focus:border-brand-500 focus:outline-none focus:ring-4 focus:ring-brand-500/10";
 
 const label = "block text-sm font-medium text-brand-900";
@@ -99,7 +99,7 @@ export function ContactForm() {
           </label>
           <input
             id="naam"
-            name="name"
+            name="naam"
             type="text"
             required
             autoComplete="name"
@@ -129,7 +129,7 @@ export function ContactForm() {
           </label>
           <input
             id="telefoon"
-            name="Phone Number"
+            name="telefoon"
             type="tel"
             autoComplete="tel"
             placeholder="06 12345678"
@@ -153,7 +153,7 @@ export function ContactForm() {
                 {service.name}
               </option>
             ))}
-            <option value="Anders">Anders / I don't know yet</option>
+            <option value="Anders">Anders / I don&apos;t know yet</option>
           </select>
         </div>
 
@@ -182,7 +182,7 @@ export function ContactForm() {
       )}
 
       <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-xs leading-relaxed text-sand-500 sm:max-w-xs">
+        <p className="text-xs leading-relaxed text-sand-600 sm:max-w-xs">
           We use your information solely to respond to this request.
         </p>
 

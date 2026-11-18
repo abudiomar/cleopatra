@@ -17,9 +17,9 @@
   --color-brand-800: #1c3a85;
   --color-brand-900: #0f2350;
   --color-brand-950: #0a1733;
-  
-  --color-brand-950: #E6C76A;
-  /* New accent scale for gold */
+
+  /* Gold accent scale. Gold is light: pair it with navy text (brand-900/950),
+     never white — white on gold-500 is only 1.65:1. */
   --color-gold-300: #f0d488;
   --color-gold-500: #e6c76a;
   --color-gold-700: #c9a23d;
@@ -39,6 +39,8 @@
   --color-accent-100: #d6f5ec;
   --color-accent-400: #4fc9a5;
   --color-accent-600: #17977a;
+  /* For accent-coloured text on light/mint backgrounds (5.3:1 on accent-100). */
+  --color-accent-700: #0f6e58;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

@@ -22,12 +22,13 @@ export const metadata: Metadata = {
   },
   description: site.description,
   keywords: [
-    "cleaning Amsterdam", 
+    "multiservice company",
+    "multi services Amsterdam",
+    "cleaning Amsterdam",
     "office cleaning",
-    "final cleaning",
-    "window cleaning", 
-    "household help", 
-    "professional cleaning"
+    "window cleaning",
+    "logistics",
+    "business services",
   ],
   alternates: { canonical: "/" },
   openGraph: {

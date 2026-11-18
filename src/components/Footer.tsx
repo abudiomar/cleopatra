@@ -13,9 +13,9 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Logo tone="light" />
-            <p className="mt-6 max-w-xs text-sm leading-relaxed text-brand-200/70">
-              {site.tagline}. Vaste teams, heldere afspraken en
-              milieuvriendelijke middelen.
+            <p className="mt-6 max-w-xs text-sm leading-relaxed text-brand-200/80">
+              {site.tagline}. Fixed teams, clear agreements and one point of
+              contact.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 text-sm">
@@ -53,7 +53,7 @@ export function Footer() {
               {services.map((service) => (
                 <li key={service.slug}>
                   <Link
-                    href={`/diensten#${service.slug}`}
+                    href={`/services#${service.slug}`}
                     className="text-brand-100/70 transition-colors hover:text-white"
                   >
                     {service.name}
@@ -89,7 +89,7 @@ export function Footer() {
               {locations.map((loc) => (
                 <li key={loc.city}>
                   {loc.city}
-                  <span className="text-brand-100/35"> · {loc.region}</span>
+                  <span className="text-brand-100/60"> · {loc.region}</span>
                 </li>
               ))}
             </ul>
@@ -101,14 +101,14 @@ export function Footer() {
               {contact.hours.map((h) => (
                 <li key={h.days} className="flex flex-col">
                   <span>{h.days}</span>
-                  <span className="text-brand-100/40">{h.time}</span>
+                  <span className="text-brand-100/60">{h.time}</span>
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-4 border-t border-white/10 pt-8 text-xs text-brand-100/45 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-16 flex flex-col gap-4 border-t border-white/10 pt-8 text-xs text-brand-100/60 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {site.legalName}. Alle rechten voorbehouden.
           </p>
@@ -117,7 +117,7 @@ export function Footer() {
               Privacybeleid
             </Link>
             <Link
-              href="/algemene-voorwaarden"
+              href="/general-terms-and-conditions"
               className="transition-colors hover:text-white"
             >
               Algemene voorwaarden

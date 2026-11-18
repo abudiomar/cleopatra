@@ -1,0 +1,41 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cleopatra",
+  // Cloudflare-account van Cleopatra (Admin@cleopatramultiservices.nl).
+  "account_id": "8132a591849f1a7c7578cb1f9d92551d",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-01",
+
+  "assets": {
+    // Output van `next build` met `output: "export"`.
+    "directory": "./out",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash",
+    // Alleen /api/* gaat langs de Worker; al het andere is een statisch bestand.
+    "run_worker_first": ["/api/*"]
+  },
+
+  // www.cleopatramultiservices.nl wordt via een Cloudflare Redirect Rule
+  // (dashboard → Rules) naar het hoofddomein doorgestuurd.
+  "routes": [
+    { "pattern": "cleopatramultiservices.nl", "custom_domain": true }
+  ],
+  // Alleen het eigen domein; geen extra *.workers.dev-adres.
+  "workers_dev": false,
+  "preview_urls": false,
+
+  // Contactformulier: de Worker logt via SMTP in op de TransIP-mailbox
+  // CONTACT_FROM_EMAIL en mailt de aanvraag naar CONTACT_TO_EMAIL.
+  // Het wachtwoord van die mailbox is een secret:
+  //   npx wrangler secret put SMTP_PASSWORD
+  "vars": {
+    "SITE_NAME": "Cleopatra Multi Services",
+    "CONTACT_TO_EMAIL": "info@cleopatramultiservices.nl",
+    "CONTACT_FROM_EMAIL": "info@cleopatramultiservices.nl",
+    "SMTP_HOST": "smtp.transip.email",
+    "SMTP_PORT": "465"
+  },
+
+  "observability": { "enabled": true }
+}

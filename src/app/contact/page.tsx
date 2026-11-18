@@ -10,7 +10,7 @@ import { contact, locations } from "@/content/site";
 export const metadata: Metadata = {
   title: "Contact and quote request",
   description:
-    "Request a no-obligation quote from Cleopatra Professional Cleaning. We will respond within one business day and visit you free of charge to assess the situation.",
+    "Request a no-obligation quote from Cleopatra Multi Services. We will respond within one business day and visit you free of charge to assess the situation.",
   alternates: { canonical: "/contact" },
 };
 
@@ -31,7 +31,7 @@ export default function ContactPage() {
 
           <aside className="lg:col-span-5">
             <div className="rounded-card border border-sand-200 bg-white p-8">
-              <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-sand-500">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-sand-600">
                 Direct contact
               </h2>
 
@@ -45,7 +45,7 @@ export default function ContactPage() {
                       <Icon name="phone" className="size-4" />
                     </span>
                     <span className="leading-tight">
-                      <span className="block text-sm text-sand-500">
+                      <span className="block text-sm text-sand-600">
                         Telefoon
                       </span>
                       <span className="mt-0.5 block font-medium">
@@ -66,7 +66,7 @@ export default function ContactPage() {
                       <Icon name="whatsapp" className="size-4" />
                     </span>
                     <span className="leading-tight">
-                      <span className="block text-sm text-sand-500">
+                      <span className="block text-sm text-sand-600">
                         WhatsApp
                       </span>
                       <span className="mt-0.5 block font-medium">
@@ -85,7 +85,7 @@ export default function ContactPage() {
                       <Icon name="mail" className="size-4" />
                     </span>
                     <span className="leading-tight">
-                      <span className="block text-sm text-sand-500">
+                      <span className="block text-sm text-sand-600">
                         E-mail
                       </span>
                       <span className="mt-0.5 block font-medium break-all">
@@ -97,7 +97,7 @@ export default function ContactPage() {
               </ul>
 
               <div className="mt-8 border-t border-sand-200 pt-7">
-                <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-sand-500">
+                <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-sand-600">
                   Accessibility
                 </h3>
                 <dl className="mt-5 space-y-2.5 text-sm">
@@ -111,8 +111,8 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-8 border-t border-sand-200 pt-7">
-                <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-sand-500">
-                  Area of ​​operation
+                <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-sand-600">
+                  Area of operation
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-sand-600">
                   {locations.map((l) => l.city).join(", ")} and the immediate

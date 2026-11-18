@@ -8,7 +8,7 @@ import { contact, locations, services, site } from "@/content/site";
 export function JsonLd() {
   const localBusiness = {
     "@context": "https://schema.org",
-    "@type": "CleaningService",
+    "@type": "LocalBusiness",
     "@id": `${site.url}/#organisatie`,
     name: site.name,
     description: site.description,
@@ -48,7 +48,7 @@ export function JsonLd() {
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Schoonmaakdiensten",
+      name: "Services",
       itemListElement: services.map((service) => ({
         "@type": "Offer",
         itemOffered: {

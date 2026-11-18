@@ -14,7 +14,7 @@ export function Logo({
     <Link
       href="/"
       className={`group inline-flex items-center gap-3 ${className}`}
-      aria-label="Cleopatra Professional Cleaning — to the homepage"
+      aria-label="Cleopatra Multi Services — to the homepage"
     >
       <Image
         src="/image/cleobatra-logo.png"
@@ -35,10 +35,10 @@ export function Logo({
         </span>
         <span
           className={`mt-1 text-[0.6875rem] font-medium uppercase tracking-[0.14em] ${
-            isLight ? "text-brand-200" : "text-sand-500"
+            isLight ? "text-brand-200" : "text-sand-600"
           }`}
         >
-          Professional Cleaning
+          Multi Services
         </span>
       </span>
     </Link>

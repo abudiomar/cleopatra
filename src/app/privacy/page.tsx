@@ -7,7 +7,7 @@ import { contact, site } from "@/content/site";
 export const metadata: Metadata = {
   title: "Privacybeleid",
   description:
-    "Hoe Cleopatra Professional Cleaning omgaat met uw persoonsgegevens.",
+    "Hoe Cleopatra Multi Services omgaat met uw persoonsgegevens.",
   alternates: { canonical: "/privacy" },
   robots: { index: false, follow: true },
 };
